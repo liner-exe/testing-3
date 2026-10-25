@@ -1,0 +1,42 @@
+[
+  {
+    "case_id": "SDD-01",
+    "description": "Стандартный опрос с явным лидером",
+    "question": "Любимая ОС для разработки?",
+    "options": ["Linux", "macOS", "Windows"],
+    "answers": ["Linux", "Linux", "macOS", "Windows"],
+    "expected_total": 4,
+    "expected_percentages": {"Linux": 50.0, "macOS": 25.0, "Windows": 25.0},
+    "expected_leader": "Linux"
+  },
+  {
+    "case_id": "SDD-02",
+    "description": "Граничный случай: опрос без голосов (0 ответов)",
+    "question": "Планируете ли переход на Python 3.14?",
+    "options": ["Да", "Нет"],
+    "answers": [],
+    "expected_total": 0,
+    "expected_percentages": {"Да": 0.0, "Нет": 0.0},
+    "expected_leader": null
+  },
+  {
+    "case_id": "SDD-03",
+    "description": "Граничный случай: 100% голосов за один вариант (единогласно)",
+    "question": "Нужна ли автоматизация тестирования?",
+    "options": ["Безусловно", "Не нужна"],
+    "answers": ["Безусловно", "Безусловно", "Безусловно"],
+    "expected_total": 3,
+    "expected_percentages": {"Безусловно": 100.0, "Не нужна": 0.0},
+    "expected_leader": "Безусловно"
+  },
+  {
+    "case_id": "SDD-04",
+    "description": "Дробное распределение голосов с округлением до 2 знаков (1/3 = 33.33%)",
+    "question": "Предпочитаемый формат работы?",
+    "options": ["Офис", "Удалёнка", "Гибрид"],
+    "answers": ["Удалёнка", "Офис", "Гибрид"],
+    "expected_total": 3,
+    "expected_percentages": {"Офис": 33.33, "Удалёнка": 33.33, "Гибрид": 33.33},
+    "expected_leader": "Офис"
+  }
+]
